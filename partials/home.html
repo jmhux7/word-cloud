@@ -1,1 +1,11 @@
-<h1>Home</h1>
+<div class="row" ng-congroller="HomeController">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea id="textarea1" class="materialize-textarea" ng-model="content"></textarea>
+        <label for="textarea1">Enter content here</label>
+        <input ng-click="countWords(content)" type="submit" value="Generate Word Cloud" class="waves-effect waves-light btn">
+      </div>
+    </div>
+  </form>
+</div>
