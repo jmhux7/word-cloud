@@ -1,9 +1,10 @@
 app.service('WordService', function () {
-  
+
   var currentWords = [];
+  var currentPhrase = [];
 
   var pushWords = function(phrase) {
-    var wordArr = phrase.split(' ');
+    wordArr = phrase.split(' ');
     var wordObj = {};
     for (var i = 0; i < wordArr.length; i++) {
       if(wordObj[wordArr[i]]) {
@@ -13,11 +14,14 @@ app.service('WordService', function () {
       }
     }
     currentWords.push(wordObj);
-    console.log(currentWords);
+    currentPhrase.push(wordArr);
+    // console.log(currentWords);
   }
 
   return {
-    pushWords: pushWords
+    pushWords: pushWords,
+    currentWords: currentWords,
+    wordArr: currentPhrase
   }
 
 })
