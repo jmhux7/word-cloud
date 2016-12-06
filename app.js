@@ -2,7 +2,7 @@ var app = angular.module('word-cloud', ['ngRoute']);
 
 app.config(function($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/#', {
         templateUrl: 'partials/home.html',
         controller: 'HomeController'
       })
