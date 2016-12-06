@@ -1,10 +1,9 @@
 <div ng-controller="CloudController">
   <div>
     <p>
-      <span ng-repeat="word in wordArr track by $index" style="{{getStyle($index)}}">
+      <span ng-repeat="word in wordArr track by $index" style="{{getStyle($index, word)}}">
         {{ word }}
       </span>
     </p>
   </div>
-
 </div>
